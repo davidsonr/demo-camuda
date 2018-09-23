@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="dish-id" name="Dish" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="dish" name="dish">
+    <extensionElements>
+      <biodi:bounds x="150" y="150" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1">
+      <input id="input_1">
+        <inputExpression id="inputExpression_1" typeRef="string">
+          <text>season</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" name="dish" typeRef="string" />
+      <rule id="DecisionRule_02j4vep">
+        <inputEntry id="UnaryTests_0jp45vk">
+          <text>"AUTUMN"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16kdtfb">
+          <text>"Spareribs"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05q0id5">
+        <inputEntry id="UnaryTests_1ruz99r">
+          <text>"WINTER"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1kgpx1e">
+          <text>"Roastbeef"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qbvsg8">
+        <inputEntry id="UnaryTests_1e3f956">
+          <text>"SPRING"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qa2373">
+          <text>"Steak"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0g8wg7w">
+        <inputEntry id="UnaryTests_0xqripx">
+          <text>"SUMMER"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11iti2b">
+          <text>"Light Salad"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
